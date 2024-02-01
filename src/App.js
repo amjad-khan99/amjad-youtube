@@ -1,11 +1,18 @@
 import logo from './logo.svg';
+import Head from './components/Head';
+import Body from './components/Body';
 import './App.css';
+import { Provider } from 'react-redux';
+import store from './utils/store';
 
 function App() {
   return (
-    <div className="bg-red-500">
-      <h1 className='text-3xl font-bold '>Youtube</h1>
-    </div>
+    <Provider store={store}>
+      <div className="">
+      <Head/>
+      <Body/>
+      </div>
+    </Provider>
   );
 }
 
